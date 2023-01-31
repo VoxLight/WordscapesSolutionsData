@@ -55,7 +55,8 @@ def get_answers_on_page(driver):
 def save_answers(answers):
     print("Saving answers...")
 
-    dbfile = "./database/2000.json" 
+    dbfile = "./database/4000.json"
+
     with open(dbfile, "r+") as dumpfile:
         levels = json.load(dumpfile)
         levels.update(answers)
@@ -78,7 +79,7 @@ def get_many_answers_from_levels(first_level=1, last_level=1000):
         # driver.back()
 
 def main():
-    get_many_answers_from_levels(first_level=605, last_level=1000)
+    get_many_answers_from_levels(first_level=3001, last_level=4000)
     # print(get_answers_by_level(209))
 
 if __name__ == "__main__":
